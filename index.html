@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Sagar — Product Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Smooth Scroll & Cursor CSS -->
+    <style>
+        html.lenis, html.lenis body {
+            height: auto;
+        }
+        .lenis-smooth {
+            scroll-behavior: auto !important;
+        }
+        .lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        /* Custom Cursor CSS */
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #6639E4;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(102, 57, 228, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+        }
+        
+        /* Hide default cursor on desktop */
+        @media (min-width: 768px) {
+            body { cursor: none; }
+            a, button, [role="button"] { cursor: none; }
+        }
+        
+        /* Cursor hover state */
+        .cursor-hover {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(102, 57, 228, 0.1);
+            border-color: #6639E4;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #fcfcfc;
+            overflow-x: hidden;
+        }
+
+        .serif-font {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            /* Default for mobile */
+            line-height: 1.1;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 74.76px;
+            }
+        }
+        .section-title {
+            font-family: 'DM Sans', sans-serif;
+            letter-spacing: -1px;
+            font-style: normal !important;
+        }
+
+        /* Wavy Text Effect */
+        .wavy-hover {
+            display: inline-flex;
+            flex-wrap: wrap; /* For mobile responsiveness */
+            padding-bottom: 0.2em; /* Prevents descenders like 'g' from cutting */
+        }
+        .wavy-hover span {
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+            pointer-events: none;
+        }
+        .wavy-hover:hover span {
+            animation: wavy-text 0.5s ease-in-out forwards;
+            animation-delay: calc(0.03s * var(--i));
+        }
+        @keyframes wavy-text {
+            0% { transform: translateY(0); }
+            30% { transform: translateY(-20%); }
+            100% { transform: translateY(0); }
+        }
+
+        .max-w-custom {
+            max-width: 85rem;
+        }
+        .hero-bg {
+            background-image: url('images/Bg2.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .blue-glow {
+            background-image: url('images/bluebg.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-pill {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        .white-section {
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            background: #ffffff;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Consistency in radius for mobile as well */
+        @media (max-width: 768px) {
+            .white-section {
+                border-top-left-radius: 60px;
+                border-top-right-radius: 60px;
+                padding-top: 40px !important;
+                padding-bottom: 40px !important;
+            }
+        }
+
+        .btn-purple {
+            background: #6639E4;
+            box-shadow: 0 10px 20px rgba(102, 57, 228, 0.3);
+        }
+
+        .btn-purple:hover {
+            background: #5628D3;
+            transform: translateY(-2px);
+        }
+
+        /* Slider Styles for Mobile */
+        .slider-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            padding: 10px 0;
+            /* Reduced padding */
+        }
+
+        .slider-track {
+            display: flex;
+            gap: 20px;
+            /* Reduced gap between logos */
+            width: calc(250px * 20);
+            animation: scroll 25s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-250px * 10));
+            }
+        }
+
+        .slider-track div {
+            flex-shrink: 0;
+            width: 180px;
+            /* Increased container width for bigger logos */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-indigo-100">
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen pt-24 md:pt-0 flex flex-col items-center relative overflow-hidden">
+        <!-- Content shifted up with negative top margin on desktop -->
+        <div
+            class="max-w-7xl w-full mx-auto px-6 flex flex-col md:flex-row items-center justify-between flex-grow md:-mt-32 relative z-20">
+
+            <!-- Hero Text -->
+            <div class="w-full md:w-1/2 flex flex-col items-start gap-4 mb-12 md:mb-0 relative z-20">
+                <span class="text-xl md:text-2xl font-medium text-gray-800">I'm Sachin Sagar</span>
+                <h1 class="serif-font hero-title italic text-gray-900 wavy-hover" id="hero-wavy">
+                    <!-- Split by JS -->
+                </h1>
+                <script>
+                    const title = "Product Designer";
+                    const el = document.getElementById('hero-wavy');
+                    const words = title.split(' ');
+                    let charIndex = 0;
+                    el.innerHTML = words.map((word, wIdx) => {
+                        const spans = word.split('').map((char, i) => {
+                            charIndex++;
+                            return `<span style="--i:${charIndex}">${char}</span>`;
+                        }).join('');
+                        // Add a real space between words using a word-wrapper
+                        return `<span class="inline-flex">${spans}</span>` + (wIdx < words.length - 1 ? '<span style="--i:0">&nbsp;</span>' : '');
+                    }).join('');
+                </script>
+                <p class="text-lg md:text-xl text-gray-600 max-w-lg leading-relaxed font-light">
+                    Engineer-turned-designer with 4+ years of experience designing scalable digital Brands. I
+                    collaborate with teams across industries, using AI and code to bring ideas to life.
+                </p>
+                <div class="flex flex-row items-center gap-4 md:gap-8 mt-8 w-full md:w-auto">
+                    <a href="https://wa.me/918800341992" target="_blank" class="group btn-purple text-white px-6 md:px-10 py-4 md:py-5 rounded-full font-bold transition-all whitespace-nowrap text-sm md:text-base flex-1 md:flex-none overflow-hidden h-fit flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg transition-transform duration-500 group-hover:scale-110"></i>
+                        <div class="relative overflow-hidden h-5 md:h-6 uppercase">
+                            <span class="block transition-transform duration-500 group-hover:-translate-y-full">Contact Me</span>
+                            <span class="block absolute top-0 left-0 w-full translate-y-full transition-transform duration-500 group-hover:translate-y-0">Contact Me</span>
+                        </div>
+                    </a>
+                    <a href="#"
+                        class="text-black font-bold border-b-2 border-black pb-1 uppercase tracking-wider text-[10px] md:text-sm whitespace-nowrap flex-1 md:flex-none text-center md:text-left">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="w-full md:w-1/2 relative flex justify-center md:justify-end h-[500px] md:h-screen">
+                <img src="images/sachin.png" alt="Sachin Sagar" class="h-full object-contain z-10">
+                <!-- Bottom Soft Shadow for Image -->
+                <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white/30 to-transparent z-15">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Decorative Blue Glow reaching behind Clientele -->
+        <div
+            class="blue-glow absolute -bottom-10 left-1/2 -translate-x-1/2 w-[110%] h-[1000px] z-10 pointer-events-none">
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="white-section -mt-32 relative z-30 py-24 px-6 md:px-12">
+        
+        <!-- Clientele Section -->
+        <div class="max-w-custom mx-auto text-center">
+            <h2 class="section-title text-[38px] md:text-[40px] text-gray-900 mb-1 wavy-hover" id="clientele-wavy"></h2>
+            <script>
+                const cTitle = "Clientele";
+                const cEl = document.getElementById('clientele-wavy');
+                cEl.innerHTML = cTitle.split('').map((char, i) => 
+                    `<span style="--i:${i}">${char}</span>`
+                ).join('');
+            </script>
+            <p class="text-gray-500 font-medium mb-6 md:mb-16 italic text-sm md:text-base">Worked With Over 120+ Brands
+                Globally</p>
+
+            <!-- Desktop View: Centered and responsive -->
+            <div class="hidden md:block w-full">
+                <img src="images/clients/desktop.svg" alt="Our Clientele" class="w-full h-auto mx-auto">
+            </div>
+
+            <!-- Mobile View: Bigger Logos & Auto-sliding -->
+            <div class="md:hidden slider-container">
+                <div class="slider-track">
+                    <!-- Set 1 -->
+                    <div><img src="images/clients/anikmart.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/fleurons.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/one8_commune.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/french_fector.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/pincode.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/farmerr.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/ozar_luxury.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/startup_movers.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/greenlead.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/sorbet_and_co.svg" class="h-16 w-auto object-contain"></div>
+                    <!-- Duplicate -->
+                    <div><img src="images/clients/anikmart.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/fleurons.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/one8_commune.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/french_fector.svg" class="h-14 w-auto object-contain"></div>
+                    <div><img src="images/clients/pincode.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/farmerr.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/ozar_luxury.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/startup_movers.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/greenlead.svg" class="h-16 w-auto object-contain"></div>
+                    <div><img src="images/clients/sorbet_and_co.svg" class="h-16 w-auto object-contain"></div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="hidden md:block border-gray-100 mb-8 md:mb-12 max-w-custom mx-auto">
+
+        <!-- Selected Work -->
+        <div class="max-w-custom mx-auto mb-4 md:mb-32 text-center">
+            <h2 class="section-title text-[38px] md:text-[40px] text-gray-900 pt-8 mb-12 md:mb-16 px-4 wavy-hover justify-center" id="selected-wavy"></h2>
+            <script>
+                const sTitle = "Selected Work";
+                const sEl = document.getElementById('selected-wavy');
+                sEl.innerHTML = sTitle.split('').map((char, i) => 
+                    `<span style="--i:${i}">${char === ' ' ? '&nbsp;' : char}</span>`
+                ).join('');
+            </script>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 md:gap-y-20">
+                <!-- Project 1 -->
+                <div class="flex flex-col gap-6 group hover-trigger cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl aspect-[16/10] bg-gray-50 border border-gray-100">
+                        <img src="images/projects/project1.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-4 px-2 text-left">
+                        <span class="inline-block bg-gray-100 text-gray-500 text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest w-fit">ECOM | UI/UX DESIGN</span>
+                        <h3 class="text-[1.25rem] md:text-3xl font-medium text-gray-900 leading-tight">
+                            Transforming the Rudraksha & Gemstone Ordering Journey with a Seamless UX Overhaul
+                        </h3>
+                        <button class="group bg-[#0f172a] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-xs md:text-sm w-fit transition-all hover:bg-black overflow-hidden uppercase">
+                            <div class="relative overflow-hidden h-5">
+                                <span class="block transition-transform duration-500 group-hover:-translate-y-full">Read Case Study</span>
+                                <span class="block absolute top-0 left-0 w-full translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read Case Study</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="flex flex-col gap-6 group hover-trigger cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl aspect-[16/10] bg-gray-50 border border-gray-100">
+                        <img src="images/projects/project2.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-4 px-2 text-left">
+                        <span class="inline-block bg-gray-100 text-gray-500 text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest w-fit">ECOM | UI/UX DESIGN</span>
+                        <h3 class="text-[1.25rem] md:text-3xl font-medium text-gray-900 leading-tight">
+                            Redesigning the Luxury Beauty Experience for Organity Skin Care
+                        </h3>
+                        <button class="group bg-[#0f172a] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-xs md:text-sm w-fit transition-all hover:bg-black overflow-hidden uppercase">
+                            <div class="relative overflow-hidden h-5">
+                                <span class="block transition-transform duration-500 group-hover:-translate-y-full">Read Case Study</span>
+                                <span class="block absolute top-0 left-0 w-full translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read Case Study</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 (Repeat 1) -->
+                <div class="flex flex-col gap-6 group hover-trigger cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl aspect-[16/10] bg-gray-50 border border-gray-100">
+                        <img src="images/projects/project1.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-4 px-2 text-left">
+                        <span class="inline-block bg-gray-100 text-gray-500 text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest w-fit">ECOM | UI/UX DESIGN</span>
+                        <h3 class="text-[1.25rem] md:text-3xl font-medium text-gray-900 leading-tight">
+                            Enhancing Digital Presence for Veda Rudraksha Global
+                        </h3>
+                        <button class="group bg-[#0f172a] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-xs md:text-sm w-fit transition-all hover:bg-black overflow-hidden uppercase">
+                            <div class="relative overflow-hidden h-5">
+                                <span class="block transition-transform duration-500 group-hover:-translate-y-full">Read Case Study</span>
+                                <span class="block absolute top-0 left-0 w-full translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read Case Study</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4 (Repeat 2) -->
+                <div class="flex flex-col gap-6 group hover-trigger cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl aspect-[16/10] bg-gray-50 border border-gray-100">
+                        <img src="images/projects/project2.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-4 px-2 text-left">
+                        <span class="inline-block bg-gray-100 text-gray-500 text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest w-fit">ECOM | UI/UX DESIGN</span>
+                        <h3 class="text-[1.25rem] md:text-3xl font-medium text-gray-900 leading-tight">
+                            Digital Branding and Interface Design for Premium Organity Products
+                        </h3>
+                        <button class="group bg-[#0f172a] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-xs md:text-sm w-fit transition-all hover:bg-black overflow-hidden uppercase">
+                            <div class="relative overflow-hidden h-5">
+                                <span class="block transition-transform duration-500 group-hover:-translate-y-full">Read Case Study</span>
+                                <span class="block absolute top-0 left-0 w-full translate-y-full transition-transform duration-500 group-hover:translate-y-0">Read Case Study</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="components.js"></script>
+    
+    <script>
+        // --- Smooth Scroll (Lenis) ---
+        const lenis = new Lenis()
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+
+        // --- Click Sound & Spark Effect ---
+        const clickSound = new Audio('images/Sachin-Product-Designer-best-in-new-delhi-in-dwarka.mp3');
+        
+        function createSparks(x, y) {
+            const sparkCount = 12;
+            const container = document.body;
+            
+            for (let i = 0; i < sparkCount; i++) {
+                const spark = document.createElement('div');
+                spark.style.position = 'fixed';
+                spark.style.left = x + 'px';
+                spark.style.top = y + 'px';
+                spark.style.width = '4px';
+                spark.style.height = '4px';
+                spark.style.backgroundColor = '#6639E4';
+                spark.style.borderRadius = '50%';
+                spark.style.pointerEvents = 'none';
+                spark.style.zIndex = '10000';
+                container.appendChild(spark);
+                
+                const angle = (i / sparkCount) * Math.PI * 2;
+                const velocity = 50 + Math.random() * 100;
+                const destinationX = Math.cos(angle) * velocity;
+                const destinationY = Math.sin(angle) * velocity;
+                
+                gsap.to(spark, {
+                    x: destinationX,
+                    y: destinationY,
+                    opacity: 0,
+                    scale: 0.5,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    onComplete: () => spark.remove()
+                });
+            }
+        }
+
+        window.addEventListener('click', (e) => {
+            clickSound.currentTime = 0;
+            clickSound.play().catch(e => console.log("Audio playback waiting for user interaction."));
+            createSparks(e.clientX, e.clientY);
+        });
+
+        // --- Custom Cursor (GSAP) ---
+        const dot = document.querySelector('.cursor-dot');
+        const outline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(dot, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0
+            });
+            gsap.to(outline, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.15
+            });
+        });
+
+        // Hover effect for links and buttons
+        const interactiveElements = document.querySelectorAll('a, button, .logo-grid div');
+        interactiveElements.forEach((el) => {
+            el.addEventListener('mouseenter', () => {
+                outline.classList.add('cursor-hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                outline.classList.remove('cursor-hover');
+            });
+        });
+    </script>
+</body>
+
+</html>
