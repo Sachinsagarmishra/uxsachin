@@ -219,7 +219,7 @@
             <span style="--i:1">P</span><span style="--i:2">o</span><span style="--i:3">r</span><span style="--i:4">t</span><span style="--i:5">f</span><span style="--i:6">o</span><span style="--i:7">l</span><span style="--i:8">i</span><span style="--i:9">o</span>
         </a>
         <span class="text-gray-300">|</span>
-        <a href="#" class="nav-link-anime hover:text-black transition-colors wavy-hover">
+        <a href="about.php" class="nav-link-anime hover:text-black transition-colors wavy-hover">
             <span style="--i:1">A</span><span style="--i:2">b</span><span style="--i:3">o</span><span style="--i:4">u</span><span style="--i:5">t</span>
         </a>
         <span class="text-gray-300">|</span>
