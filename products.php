@@ -18,104 +18,52 @@
         <?php
         $projects = [
             [
-                'image' => 'images/projects/himalayarudrakshshop.webp',
-                'category' => 'ECOM | UI/UX DESIGN',
-                'title' => 'Transforming the Rudraksha Shopping Experience',
+                'image' => 'images/projects/Bytbots.webp', // Placeholder image until Figma thumbnails are provided
+                'category' => 'FIGMA PLUGIN',
+                'title' => 'AI Nano Banana Pro',
                 'features' => [
-                    'End-to-end UX overhaul for a spiritual e-commerce platform.',
-                    'Custom product recommendations based on birth details.',
-                    'Integrated secure international payment gateways.'
-                ]
+                    'Generate high-quality AI images, ad creatives, and UI/UX mockups directly in Figma.',
+                    'Boost your design workflow by removing the need for external AI generation tools.',
+                    'Generate consistent style assets across your entire UI canvas.'
+                ],
+                'link' => 'https://www.figma.com/community/plugin/1607697366009792735/ai-nano-banana-pro-figma-plugin-for-ai-image-generation-ad-creatives-ui-ux-mockups',
+                'button_text' => 'View Plugin'
             ],
             [
-                'image' => 'images/projects/Organity.webp',
-                'category' => 'ECOM | DIGITAL BRANDING',
-                'title' => 'Redesigning the Luxury Beauty Experience',
+                'image' => 'images/projects/Auslese Automation.webp', // Placeholder
+                'category' => 'FIGMA PLUGIN',
+                'title' => 'PDF Pages Importer',
                 'features' => [
-                    'Trendy skincare interface focusing on natural ingredients.',
-                    'Intelligent skin quiz matching users with the right products.',
-                    'Elegant brand identity and seamless checkout flow.'
-                ]
+                    'Import multi-page PDF documents effortlessly straight into your Figma files.',
+                    'Auto-convert imported pages into perfectly sized and aligned Figma frames.',
+                    'Retain high-resolution vector and image quality during the import process.'
+                ],
+                'link' => 'https://www.figma.com/community/plugin/1594021113746022956/pdf-pages-importer',
+                'button_text' => 'View Plugin'
             ],
             [
-                'image' => 'images/projects/Bytbots.webp',
-                'category' => 'SAAS | WEB DESIGN',
-                'title' => 'Innovative Web Platform for AI Automation',
+                'image' => 'images/projects/Organity.webp', // Placeholder
+                'category' => 'FIGMA PLUGIN',
+                'title' => 'CSS Exporter - Copy Properties',
                 'features' => [
-                    'Enterprise dashboard simplifying complex AI workflows.',
-                    'Real-time data synchronization with sub-second latency.',
-                    'Intuitive drag-and-drop interface for bot creation.'
-                ]
+                    'Extract Production-ready CSS styles directly from any Figma node.',
+                    'Automatically compile shadows, borders, typography, and flexbox layouts into clean CSS.',
+                    'Bridge the gap between design and development by instantly copying styles to your clipboard.'
+                ],
+                'link' => 'https://www.figma.com/community/plugin/1594096844440707811/css-exporter-copy-properties',
+                'button_text' => 'View Plugin'
             ],
             [
-                'image' => 'images/projects/Sorbet & co.webp',
-                'category' => 'ECOM | BRAND IDENTITY',
-                'title' => 'Elevating the E-commerce Dessert Experience',
+                'image' => 'images/projects/Sorbet & co.webp', // Placeholder
+                'category' => 'WORDPRESS PLUGIN',
+                'title' => 'Brand Support Chatbot',
                 'features' => [
-                    'Aesthetically pleasing visual identity representing premium desserts.',
-                    'Integrated loyalty and customer reward program.',
-                    'Optimized local delivery routing system within checkout.'
-                ]
-            ],
-            [
-                'image' => 'images/projects/Wanderoo.webp',
-                'category' => 'TRAVEL | APP DESIGN',
-                'title' => 'Intuitive App Design for Travel Experiences',
-                'features' => [
-                    'Seamless booking interface for personalized travel itineraries.',
-                    'Interactive maps and location-based discovery features.',
-                    'Real-time booking and availability synchronization.'
-                ]
-            ],
-            [
-                'image' => 'images/projects/Auslese Automation.webp',
-                'category' => 'TECH | UI/UX DESIGN',
-                'title' => 'Streamlining Industrial Tech Interfaces',
-                'features' => [
-                    'B2B platform design tailored for industrial automation clients.',
-                    'Complex specification filters for heavy machinery and parts.',
-                    'Data-heavy dashboard simplified for operational efficiency.'
-                ]
-            ],
-            [
-                'image' => 'images/projects/funding4u.webp',
-                'category' => 'FINTECH | PLATFORM DESIGN',
-                'title' => 'Building a Trustworthy Financial Platform',
-                'features' => [
-                    'Secure and transparent interface for financial transactions.',
-                    'User-friendly dashboard for tracking funding and investments.',
-                    'Automated compliance and KYC verification flows.'
-                ]
-            ],
-            [
-                'image' => 'images/projects/frenchfactor.webp',
-                'category' => 'ECOM | STORE REDESIGN',
-                'title' => 'Revamping the Digital Perfume Storefront',
-                'features' => [
-                    'Immersive product pages highlighting fragrance notes.',
-                    'Optimized mobile conversion funnel reducing cart abandonment.',
-                    'Integrated subscription model for recurring purchases.'
-                ]
-            ],
-            [
-                'image' => 'images/projects/youshare.webp',
-                'category' => 'SOCIAL | APP DESIGN',
-                'title' => 'Engaging Social Connectivity Platform',
-                'features' => [
-                    'Modern feed design focusing on multimedia content sharing.',
-                    'Real-time messaging and community engagement tools.',
-                    'Customizable user profiles and interaction tracking.'
-                ]
-            ],
-            [
-                'image' => 'images/projects/Readwise.webp',
-                'category' => 'SAAS | UI DESIGN',
-                'title' => 'Optimizing the Reading Architecture',
-                'features' => [
-                    'Clean, distraction-free typography and reading environment.',
-                    'Efficient highlight organization and tagging system.',
-                    'Cross-device sync UI tailored for heavy readers.'
-                ]
+                    'Integrate an automated AI-powered support chatbot directly into any WordPress site.',
+                    'Provide instant 24/7 customer support and automated lead generation capabilities.',
+                    'Easily customize the chatbot appearance to perfectly match your brand aesthetics.'
+                ],
+                'link' => 'https://wordpress.org/plugins/brand-support-chatbot/',
+                'button_text' => 'View Plugin'
             ]
         ];
         ?>
@@ -156,12 +104,12 @@
                         <?php endforeach; ?>
                     </ul>
 
-                    <button class="group bg-[#0f172a] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-xs md:text-sm w-fit transition-all hover:bg-black overflow-hidden uppercase">
+                    <a href="<?php echo htmlspecialchars($project['link']); ?>" target="_blank" rel="noopener noreferrer" class="group bg-[#0f172a] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-xs md:text-sm w-fit transition-all hover:bg-black overflow-hidden uppercase inline-block">
                         <div class="relative overflow-hidden h-4 md:h-5">
-                            <span class="block transition-transform duration-500 group-hover:-translate-y-full">View Case Study</span>
-                            <span class="block absolute top-0 left-0 w-full translate-y-full transition-transform duration-500 group-hover:translate-y-0">View Case Study</span>
+                            <span class="block transition-transform duration-500 group-hover:-translate-y-full"><?php echo htmlspecialchars($project['button_text']); ?></span>
+                            <span class="block absolute top-0 left-0 w-full translate-y-full transition-transform duration-500 group-hover:translate-y-0"><?php echo htmlspecialchars($project['button_text']); ?></span>
                         </div>
-                    </button>
+                    </a>
                 </div>
 
             </div>
