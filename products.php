@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 <!-- Content Section -->
-<section class="min-h-screen pt-32 pb-24 px-6 md:px-12 bg-white relative z-30">
+<section class="min-h-screen pt-20 md:pt-32 pb-24 px-6 md:px-12 bg-white relative z-30">
     <div class="max-w-custom mx-auto mb-4 md:mb-32">
         <div class="text-center mb-16 md:mb-24 px-4">
             <h1 class="serif-font text-[40px] md:text-6xl text-gray-900 mb-0 md:mb-4 font-bold tracking-tight pt-8">Digital Products</h1>
