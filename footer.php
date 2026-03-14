@@ -93,6 +93,29 @@
                 outline.classList.remove('cursor-hover');
             });
         });
+        // --- Security & Protection ---
+        // Disable Right-Click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // Disable keyboard shortcuts for inspecting (F12, Ctrl+Shift+I, etc.)
+        document.addEventListener('keydown', (e) => {
+            if (e.keyCode == 123 || // F12
+                (e.ctrlKey && e.shiftKey && e.keyCode == 73) || // Ctrl+Shift+I
+                (e.ctrlKey && e.shiftKey && e.keyCode == 74) || // Ctrl+Shift+J
+                (e.ctrlKey && e.keyCode == 85) // Ctrl+U
+            ) {
+                e.preventDefault();
+            }
+        });
+
+        // Prevent Print Screen warning (deterrent)
+        window.addEventListener('keyup', (e) => {
+            if (e.key === 'PrintScreen') {
+                navigator.clipboard.writeText('');
+                // Note: We can't really make the screen 'black' on native OS screenshots in a browser, 
+                // but we hide body content on Print attempts via CSS.
+            }
+        });
     </script>
 </body>
 

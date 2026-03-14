@@ -23,6 +23,22 @@
             overscroll-behavior: contain;
         }
 
+        /* --- Security & Deterrents --- */
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+        }
+        @media print {
+            body { display: none !important; }
+        }
+
         /* Custom Cursor CSS */
         .cursor-dot {
             width: 8px;
