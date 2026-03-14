@@ -227,7 +227,7 @@
             <span style="--i:1">C</span><span style="--i:2">l</span><span style="--i:3">i</span><span style="--i:4">e</span><span style="--i:5">n</span><span style="--i:6">t</span><span style="--i:7">s</span>
         </a>
         <span class="text-gray-300">|</span>
-        <a href="#" class="nav-link-anime hover:text-black transition-colors wavy-hover">
+        <a href="products.php" class="nav-link-anime hover:text-black transition-colors wavy-hover">
             <span style="--i:1">P</span><span style="--i:2">r</span><span style="--i:3">o</span><span style="--i:4">d</span><span style="--i:5">u</span><span style="--i:6">c</span><span style="--i:7">t</span><span style="--i:8">s</span>
         </a>
     </div>
