@@ -1,0 +1,36 @@
+# robots.txt for https://www.sachindesign.com/
+# Allow major search engines and AI crawlers while blocking sensitive areas.
+
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /search/
+# Prevent indexing of query string parameter URLs to avoid duplicate content
+Disallow: /*?*
+
+# Explicitly allow common search engine and AI crawlers (redundant but explicit)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+# Sitemap (ensure this file exists and is up-to-date)
+Sitemap: https://www.sachindesign.com/sitemap.xml

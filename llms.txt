@@ -1,0 +1,7 @@
+# sachindesign.com llms.txt
+
+- [Sachin Mishra Portfolio](https://sachindesign.com/portfolio): Showcase Sachin Mishra's UI/UX, development, CRM, and ERP project portfolio.
+- [Client Portfolio Showcase](https://sachindesign.com/clients): Showcase diverse clients and their projects categorized by industry served.
+- [Sachin's Design Portfolio](https://sachindesign.com): Showcase Sachin's design services, portfolio, client testimonials, and contact information.
+- [Contact SachinDesign](https://sachindesign.com/contact): Provide contact information and social media links to connect with SachinDesign.
+- [About Sachin Mishra](https://sachindesign.com/about-me): Showcase Sachin Mishra's professional experience, skills, and contact information as a designer and developer.
