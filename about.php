@@ -14,7 +14,7 @@
             
             <!-- Text Side -->
             <div class="w-full md:w-7/12 flex flex-col justify-center">
-                <span class="text-[#bd3a22] font-semibold tracking-wider uppercase text-sm mb-4 block">About Me</span>
+                <span class="text-[rgb(73,20,206)] font-semibold tracking-wider uppercase text-sm mb-4 block">About Me</span>
                 <h1 class="serif-font text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-8 font-bold leading-tight">Crafting Digital Experiences with Purpose.</h1>
                 
                 <div class="text-gray-600 text-lg md:text-xl space-y-6 leading-relaxed">
@@ -32,28 +32,52 @@
         </div>
 
         <!-- Services Section -->
-        <div class="mt-20 md:mt-32 max-w-5xl mx-auto">
-            <div class="mb-12">
-                <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Capabilities</h2>
-                <h3 class="text-3xl font-medium text-gray-900">Services I Offer</h3>
-            </div>
+        <div class="mt-20 md:mt-32 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3">
+                
+                <!-- Brand Identity -->
+                <div class="flex flex-col text-left py-6 md:pr-8 lg:pr-12">
+                    <div class="h-16 w-16 mb-6 rounded-full flex items-center text-5xl">
+                        🧠
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 tracking-tight">Brand Identity</h4>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-6">Crafting visual identities that reflect brand's values, using research and creativity to give memorable branding that sets you apart.</p>
+                    <ul class="text-gray-500 text-[15px] space-y-2 italic font-medium">
+                        <li>Brand Typography & Colors</li>
+                        <li>Brand Personality & Tonality</li>
+                        <li>Brand Logo</li>
+                        <li>Brand Identity Book</li>
+                    </ul>
+                </div>
+                
+                <!-- UI/UX Design -->
+                <div class="flex flex-col text-left py-6 mt-8 pt-8 border-t border-gray-200 md:mt-0 md:pt-6 md:border-t-0 md:border-l md:px-8 lg:px-12">
+                    <div class="h-16 w-16 mb-6 rounded-full flex items-center text-5xl">
+                        📓
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 tracking-tight">UI/UX Design</h4>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-6">Design that combines with strategic thinking to create stunning visuals and intuitive user journeys for a seamless brand experience.</p>
+                    <ul class="text-gray-500 text-[15px] space-y-2 italic font-medium">
+                        <li>Mobile Apps Design</li>
+                        <li>eCommerce Design</li>
+                        <li>CRMs & ERPs</li>
+                    </ul>
+                </div>
+                
+                <!-- Graphic Design -->
+                <div class="flex flex-col text-left py-6 mt-8 pt-8 border-t border-gray-200 md:mt-0 md:pt-6 md:border-t-0 md:border-l md:pl-8 lg:pl-12">
+                    <div class="h-16 w-16 mb-6 rounded-full flex items-center text-5xl">
+                        💡
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4 tracking-tight">Graphic Design</h4>
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-6">We create striking graphic designs that captivate and communicate your message effectively across all social media platforms.</p>
+                    <ul class="text-gray-500 text-[15px] space-y-2 italic font-medium">
+                        <li>Social Media Post Grid</li>
+                        <li>Trendy Banners for Website</li>
+                        <li>Presentation Deck</li>
+                    </ul>
+                </div>
 
-            <div class="flex flex-col border-t border-gray-300">
-                <div class="group flex items-center justify-between py-10 md:py-14 border-b border-gray-300 transition-colors duration-500 hover:bg-gray-50 cursor-pointer">
-                    <h4 class="serif-font text-4xl md:text-6xl lg:text-[70px] font-bold italic text-gray-900 transition-colors duration-500 group-hover:text-[#bd3a22] -tracking-[1px] md:-tracking-[2px]">Branding & UI/UX</h4>
-                </div>
-                
-                <div class="group flex items-center justify-between py-10 md:py-14 border-b border-gray-300 transition-colors duration-500 hover:bg-gray-50 cursor-pointer">
-                    <h4 class="serif-font text-4xl md:text-6xl lg:text-[70px] font-bold italic text-gray-900 transition-colors duration-500 group-hover:text-[#bd3a22] -tracking-[1px] md:-tracking-[2px]">Shopify/Wordpress Development</h4>
-                </div>
-                
-                <div class="group flex items-center justify-between py-10 md:py-14 border-b border-gray-300 transition-colors duration-500 hover:bg-gray-50 cursor-pointer">
-                    <h4 class="serif-font text-4xl md:text-6xl lg:text-[70px] font-bold italic text-gray-900 transition-colors duration-500 group-hover:text-[#bd3a22] -tracking-[1px] md:-tracking-[2px]">Graphic Design & SEO</h4>
-                </div>
-                
-                <div class="group flex items-center justify-between py-10 md:py-14 border-b border-gray-300 transition-colors duration-500 hover:bg-gray-50 cursor-pointer">
-                    <h4 class="serif-font text-4xl md:text-6xl lg:text-[70px] font-bold italic text-gray-900 transition-colors duration-500 group-hover:text-[#bd3a22] -tracking-[1px] md:-tracking-[2px]">Custom Website</h4>
-                </div>
             </div>
         </div>
     </div>
