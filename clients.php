@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 <!-- Content Section -->
-<section class="min-h-screen pt-32 pb-24 px-6 md:px-12 bg-[#f9f9f9] relative z-30">
+<section class="min-h-screen pt-32 pb-24 px-6 md:px-12 bg-white relative z-30">
     <div class="max-w-7xl mx-auto mb-16">
         <div class="text-center mb-12">
             <h1 class="serif-font text-[40px] md:text-6xl text-gray-900 mb-4 font-bold tracking-tight">Our Clients</h1>
@@ -9,13 +9,16 @@
         </div>
 
         <!-- Filter Tabs -->
-        <div class="flex flex-wrap justify-center gap-3 mb-16">
-            <button class="filter-btn active bg-[#bd3a22] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors" data-filter="all">Show All</button>
-            <button class="filter-btn bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors" data-filter="fmcg">FMCG</button>
-            <button class="filter-btn bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors" data-filter="tech">Tech & Education</button>
-            <button class="filter-btn bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors" data-filter="fashion">Fashion & Decor & Skincare</button>
-            <button class="filter-btn bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors" data-filter="travel">Travel</button>
-            <button class="filter-btn bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors" data-filter="crm">CRMs & ERPs</button>
+        <style>
+            .hide-scrollbar::-webkit-scrollbar { display: none; }
+        </style>
+        <div class="flex overflow-x-auto md:flex-wrap md:justify-center gap-3 mb-16 pb-2 hide-scrollbar" style="scrollbar-width: none; -ms-overflow-style: none;">
+            <button class="filter-btn active bg-[rgb(73,20,206)] text-white px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap hover:bg-[rgb(73,20,206)] hover:text-white" data-filter="all">Show All</button>
+            <button class="filter-btn bg-gray-200 hover:bg-[rgb(73,20,206)] hover:text-white text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap" data-filter="fmcg">FMCG</button>
+            <button class="filter-btn bg-gray-200 hover:bg-[rgb(73,20,206)] hover:text-white text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap" data-filter="tech">Tech & Education</button>
+            <button class="filter-btn bg-gray-200 hover:bg-[rgb(73,20,206)] hover:text-white text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap" data-filter="fashion">Fashion & Decor & Skincare</button>
+            <button class="filter-btn bg-gray-200 hover:bg-[rgb(73,20,206)] hover:text-white text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap" data-filter="travel">Travel</button>
+            <button class="filter-btn bg-gray-200 hover:bg-[rgb(73,20,206)] hover:text-white text-gray-800 px-6 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap" data-filter="crm">CRMs & ERPs</button>
         </div>
 
         <?php
@@ -76,13 +79,13 @@
                     btn.addEventListener('click', function() {
                         // Remove active styling from all
                         filterBtns.forEach(b => {
-                            b.classList.remove('bg-[#bd3a22]', 'text-white');
+                            b.classList.remove('bg-[rgb(73,20,206)]', 'text-white');
                             b.classList.add('bg-gray-200', 'text-gray-800');
                         });
                         
                         // Add active styling to clicked
                         this.classList.remove('bg-gray-200', 'text-gray-800');
-                        this.classList.add('bg-[#bd3a22]', 'text-white');
+                        this.classList.add('bg-[rgb(73,20,206)]', 'text-white');
 
                         const filterValue = this.getAttribute('data-filter');
 
