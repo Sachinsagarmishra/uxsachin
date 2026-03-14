@@ -211,7 +211,7 @@
 <nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
     <!-- Desktop & Mobile Nav -->
     <div class="nav-pill flex items-center gap-2 md:gap-4 px-4 md:px-8 py-3 rounded-full text-[10px] md:text-sm font-medium text-gray-600">
-        <a href="index.php" class="nav-link-anime hover:text-black transition-colors wavy-hover">
+        <a href="/" class="nav-link-anime hover:text-black transition-colors wavy-hover">
             <span style="--i:1">H</span><span style="--i:2">o</span><span style="--i:3">m</span><span style="--i:4">e</span>
         </a>
         <span class="text-gray-300">|</span>
