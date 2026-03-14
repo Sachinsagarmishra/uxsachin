@@ -3,16 +3,9 @@
 <!-- Content Section -->
 <section class="min-h-screen pt-32 pb-24 px-6 md:px-12 bg-white relative z-30">
     <div class="max-w-custom mx-auto mb-4 md:mb-32">
-        <div class="text-center mb-16 md:mb-24">
-            <h1 class="section-title text-[38px] md:text-[50px] tracking-[-2px] text-gray-900 pt-8 mb-4 px-4 wavy-hover justify-center" id="products-wavy"></h1>
-            <script>
-                const pTitle = "Digital Products";
-                const pEl = document.getElementById('products-wavy');
-                pEl.innerHTML = pTitle.split('').map((char, i) => 
-                    `<span style="--i:${i}">${char === ' ' ? '&nbsp;' : char}</span>`
-                ).join('');
-            </script>
-            <p class="text-gray-500 text-base md:text-lg max-w-2xl mx-auto px-4">Explore some of our impactful digital products and platforms, showcasing key features and business value.</p>
+        <div class="text-center mb-16 md:mb-24 px-4">
+            <h1 class="serif-font text-[40px] md:text-6xl text-gray-900 mb-0 md:mb-4 font-bold tracking-tight pt-8">Digital Products</h1>
+            <p class="text-gray-500 text-base md:text-lg max-w-2xl mx-auto mt-4 md:mt-0">Explore some of our impactful digital products and platforms, showcasing key features and business value.</p>
         </div>
 
         <?php
