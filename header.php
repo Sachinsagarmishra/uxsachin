@@ -215,7 +215,7 @@
             <span style="--i:1">H</span><span style="--i:2">o</span><span style="--i:3">m</span><span style="--i:4">e</span>
         </a>
         <span class="text-gray-300">|</span>
-        <a href="#" class="nav-link-anime hover:text-black transition-colors wavy-hover">
+        <a href="portfolio.php" class="nav-link-anime hover:text-black transition-colors wavy-hover">
             <span style="--i:1">P</span><span style="--i:2">o</span><span style="--i:3">r</span><span style="--i:4">t</span><span style="--i:5">f</span><span style="--i:6">o</span><span style="--i:7">l</span><span style="--i:8">i</span><span style="--i:9">o</span>
         </a>
         <span class="text-gray-300">|</span>
@@ -227,8 +227,8 @@
             <span style="--i:1">C</span><span style="--i:2">l</span><span style="--i:3">i</span><span style="--i:4">e</span><span style="--i:5">n</span><span style="--i:6">t</span><span style="--i:7">s</span>
         </a>
         <span class="text-gray-300">|</span>
-        <a href="products.php" class="nav-link-anime hover:text-black transition-colors wavy-hover">
-            <span style="--i:1">P</span><span style="--i:2">r</span><span style="--i:3">o</span><span style="--i:4">d</span><span style="--i:5">u</span><span style="--i:6">c</span><span style="--i:7">t</span><span style="--i:8">s</span>
+        <a href="contact.php" class="nav-link-anime hover:text-black transition-colors wavy-hover">
+            <span style="--i:1">C</span><span style="--i:2">o</span><span style="--i:3">n</span><span style="--i:4">t</span><span style="--i:5">a</span><span style="--i:6">c</span><span style="--i:7">t</span>
         </a>
     </div>
 </nav>
