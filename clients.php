@@ -64,8 +64,8 @@
         <!-- Client Grid with Border Lines -->
         <div class="border-t border-l border-gray-200 flex flex-wrap" id="client-grid">
             <?php foreach ($clients as $client): ?>
-            <div class="client-card w-1/2 md:w-1/3 lg:w-1/5 aspect-[4/3] flex items-center justify-center p-8 border-r border-b border-gray-200 transition-all duration-300" data-category="<?php echo $client['category']; ?>">
-                <img src="<?php echo htmlspecialchars($client['image']); ?>" alt="<?php echo htmlspecialchars($client['name']); ?>" class="max-h-20 max-w-full object-contain filter w-auto">
+            <div class="client-card w-1/2 md:w-1/3 lg:w-1/5 aspect-[4/3] flex items-center justify-center p-4 md:p-6 border-r border-b border-gray-200 transition-all duration-300" data-category="<?php echo $client['category']; ?>">
+                <img src="<?php echo htmlspecialchars($client['image']); ?>" alt="<?php echo htmlspecialchars($client['name']); ?>" class="max-h-16 md:max-h-24 max-w-full object-contain filter w-auto">
             </div>
             <?php endforeach; ?>
         </div>
