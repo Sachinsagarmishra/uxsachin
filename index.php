@@ -48,7 +48,7 @@
 
             <!-- Hero Image -->
             <div class="w-full md:w-1/2 relative flex justify-center md:justify-end h-[500px] md:h-screen">
-                <img src="images/sachin.png" alt="Sachin Sagar" class="h-full object-contain z-10 -mt-[50px] md:mt-0">
+                <img src="images/sachin.png" alt="Sachin Sagar" class="h-full object-contain z-10 -mt-[50px] md:mt-[10px]">
                 <!-- Bottom Soft Shadow for Image -->
                 <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white/30 to-transparent z-15">
                 </div>
