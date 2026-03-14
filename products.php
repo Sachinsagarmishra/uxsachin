@@ -11,7 +11,7 @@
         <?php
         $projects = [
             [
-                'image' => 'images/projects/Bytbots.webp', // Placeholder image until Figma thumbnails are provided
+                'image' => 'images/products/ai-nano-banana-pro-figma-plugin.jpeg',
                 'category' => 'FIGMA PLUGIN',
                 'title' => 'AI Nano Banana Pro',
                 'features' => [
@@ -23,7 +23,7 @@
                 'button_text' => 'View Plugin'
             ],
             [
-                'image' => 'images/projects/Auslese Automation.webp', // Placeholder
+                'image' => 'images/products/pdf-pages-importer.png',
                 'category' => 'FIGMA PLUGIN',
                 'title' => 'PDF Pages Importer',
                 'features' => [
@@ -35,7 +35,7 @@
                 'button_text' => 'View Plugin'
             ],
             [
-                'image' => 'images/projects/Organity.webp', // Placeholder
+                'image' => 'images/products/css-exporter-copy-properties.png',
                 'category' => 'FIGMA PLUGIN',
                 'title' => 'CSS Exporter - Copy Properties',
                 'features' => [
@@ -47,7 +47,7 @@
                 'button_text' => 'View Plugin'
             ],
             [
-                'image' => 'images/projects/Sorbet & co.webp', // Placeholder
+                'image' => 'images/products/brand-support-ai-chatbot.png',
                 'category' => 'WORDPRESS PLUGIN',
                 'title' => 'Brand Support Chatbot',
                 'features' => [
