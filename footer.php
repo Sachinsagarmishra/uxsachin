@@ -24,7 +24,7 @@
         requestAnimationFrame(raf)
 
         // --- Click Sound & Spark Effect ---
-        const clickSound = new Audio('images/Sachin-Product-Designer-best-in-new-delhi-in-dwarka.mp3');
+        // const clickSound = new Audio('images/Sachin-Product-Designer-best-in-new-delhi-in-dwarka.mp3');
         
         function createSparks(x, y) {
             const sparkCount = 12;
@@ -61,8 +61,8 @@
         }
 
         window.addEventListener('click', (e) => {
-            clickSound.currentTime = 0;
-            clickSound.play().catch(e => console.log("Audio playback waiting for user interaction."));
+            // clickSound.currentTime = 0;
+            // clickSound.play().catch(e => console.log("Audio playback waiting for user interaction."));
             createSparks(e.clientX, e.clientY);
         });
 
