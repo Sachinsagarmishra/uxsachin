@@ -228,7 +228,7 @@
         </a>
         <span class="text-gray-300">|</span>
         <a href="#" class="nav-link-anime hover:text-black transition-colors wavy-hover">
-            <span style="--i:1">C</span><span style="--i:2">o</span><span style="--i:3">n</span><span style="--i:4">t</span><span style="--i:5">a</span><span style="--i:6">c</span><span style="--i:7">t</span>
+            <span style="--i:1">P</span><span style="--i:2">r</span><span style="--i:3">o</span><span style="--i:4">d</span><span style="--i:5">u</span><span style="--i:6">c</span><span style="--i:7">t</span><span style="--i:8">s</span>
         </a>
     </div>
 </nav>
