@@ -61,7 +61,7 @@
         ];
         ?>
 
-        <div class="flex flex-col gap-20 md:gap-32 w-full max-w-6xl mx-auto">
+        <div class="flex flex-col gap-12 w-full max-w-6xl mx-auto">
             <?php foreach ($projects as $index => $project): ?>
             <?php 
                 // Determine if this row should be reversed based on the index (even/odd)
@@ -82,7 +82,7 @@
                     <span class="inline-block bg-gray-100 text-gray-500 text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-widest w-fit mb-5">
                         <?php echo htmlspecialchars($project['category']); ?>
                     </span>
-                    <h3 class="text-2xl md:text-3xl lg:text-[2rem] font-medium text-gray-900 leading-tight mb-8">
+                    <h3 class="text-2xl md:text-3xl lg:text-[2rem] font-medium text-gray-900 leading-tight mb-4">
                         <?php echo htmlspecialchars($project['title']); ?>
                     </h3>
                     
